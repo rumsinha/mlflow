@@ -35,7 +35,7 @@ mlflow.set_tracking_uri("databricks")
 
 # In Databricks, experiments are represented by paths in the workspace.
 # By default, we write to a Shared workspace path, but you can override this in your .env
-default_user = os.environ.get("DATABRICKS_USERNAME", "Shared")
+# default_user = os.environ.get("DATABRICKS_USERNAME", "Shared")
 experiment_path = os.environ.get("DATABRICKS_EXPERIMENT_PATH", f"/Users/{default_user}/Gemini-Gradio-Agent")
 
 print(f"Configuring Databricks MLflow Tracking...")
