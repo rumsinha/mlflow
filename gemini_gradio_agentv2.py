@@ -12,9 +12,9 @@ default_user = os.environ.get("DATABRICKS_USERNAME", "Shared")
 os.environ["DATABRICKS_AUTH_TYPE"] = "pat"
 os.environ["MLFLOW_ENABLE_DB_SDK"] = "true"
 
-# Avoid "more than one authorization method configured: basic and oauth" error in Databricks SDK
-if os.environ.get("DATABRICKS_CLIENT_ID") and os.environ.get("DATABRICKS_CLIENT_SECRET"):
-    os.environ.pop("DATABRICKS_USERNAME", None)
+# # Avoid "more than one authorization method configured: basic and oauth" error in Databricks SDK
+# if os.environ.get("DATABRICKS_CLIENT_ID") and os.environ.get("DATABRICKS_CLIENT_SECRET"):
+#     os.environ.pop("DATABRICKS_USERNAME", None)
 
 # Clean and format DATABRICKS_HOST to ensure it has https:// scheme
 db_host = os.environ.get("DATABRICKS_HOST", "")
